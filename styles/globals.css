@@ -1,11 +1,11 @@
 :root {
-  --primaryLight: #721620;
-  --primary: #721620;
-  --primaryClear: #721620;
+  --primaryLight: #2329dc;
+  --primary: #2329dc;
+  --primaryClear: #2329dc;
   --space: 12px;
   --grey: black;
-  --greyClear: #8b6546;
-  --black: #721620;
+  --greyClear: black;
+  --black: #2329dc;
   --maxPageWidth: 1200px;
 }
 
@@ -31,7 +31,7 @@ button, .button {
   transition: 300ms ease;
   text-decoration: none;
   cursor: pointer;
-  font-family: Savoye Let;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 :is(button, .button):hover {

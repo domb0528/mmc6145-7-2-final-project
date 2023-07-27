@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import { searchWinePairings } from '../util/winePairing'
+import { searchtargetCalories } from '../util/mealPlaning'
 import styles from '../styles/search.module.css'
 
 
@@ -12,12 +12,12 @@ export async function getServerSideProps({query:{q}}) {
   const props = {}
   if (!q) return{props}
 
-  props.winePairings = await searchWinePairings(q)
+  props.targetCalories = await searchtargetCalories(q)
   console.log(props)
   return {props}
 }
 
-export default function Search({winePairings}) {
+export default function Search({targetCalories}) {
   const router = useRouter()
   const [query, setQuery] = useState("")
 
@@ -30,36 +30,36 @@ export default function Search({winePairings}) {
   return (
     <>
       <Head>
-        <title>Sip & Savor 🍷</title>
-        <meta name="description" content="Search for Wine Pairings" />
+        <title>Calorie Watcher 🏋️‍♂️</title>
+        <meta name="description" content="Search for Meal Plan" />
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍷</text></svg>"/>
       </Head>
 
-      <p>Type in a type of food and the website will populate a wine that pairs well with your food.</p>
+      <p>Type in your calorie number and the website will populate a meal plan that will allocate all your number of calories.</p>
 
       <form onSubmit={handleSubmit} className={styles.form}>
-        <label htmlFor="winePairing-search">Search by keywords:</label>
+        <label htmlFor="targetCalories-search">Search by adding a number:</label>
         <input
           value={query}
           onChange={e => setQuery(e.target.value)}
-          type="text"
-          name="winePairing-search"
-          id="winePairing-search" autoFocus/>
+          type="number"
+          name="targetCalories-search"
+          id="targetCalories-search" autoFocus/>
         <button type="submit">Submit</button>
       </form>
       {
-        winePairings?.length
+        targetCalories?.length
         ? <section className={styles.results}>
       
         
         {
-        winePairings.map((winePairing, i) => (   
+        targetCalories.map((targetCalories, i) => (   
         
-        <WinePairingPreview key={i} id={winePairing.id} title={winePairing.title} image={winePairing.imageUrl} description={winePairing.description} />
+        <targetCaloriesPreview key={i} id={targetCalories.id} title={targetCalories.title} image={winePairing.imageUrl} description={winePairing.description} />
         ))}
         
         </section>
-      : <p className={styles.noResults}>No WinePairings Found!</p>
+      : <p className={styles.noResults}>No Meal Plans Found</p>
     }
     </>
   )
