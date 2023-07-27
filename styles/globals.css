@@ -31,7 +31,7 @@ button, .button {
   transition: 300ms ease;
   text-decoration: none;
   cursor: pointer;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 :is(button, .button):hover {

@@ -7,7 +7,7 @@
   font-size: 4rem;
   text-align: center;
   margin: calc(var(--space) * 8) 0;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: sans-serif;
 }
 
 .foodImg {
@@ -32,7 +32,7 @@
   padding: calc(var(--space) * 4) calc(var(--space) * 2);
   box-sizing: border-box;
   font-size: 2rem;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Savoye Let;
 }
 
 .goSearch {

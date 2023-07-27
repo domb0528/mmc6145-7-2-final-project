@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <main>
         <div className={styles.container}>
-          <h1>Welcome to Calorie Watcher where you put in your amount of calories and they will populate meal suggestions 🏋️‍♂️ </h1>
+          <h1>Welcome to Calorie Watcher where you put in your amount of calories on search page </h1>
           <section className={styles.jumbo}>
             <p>Find a meal plan 🏋️‍♂️</p>
           </section>
