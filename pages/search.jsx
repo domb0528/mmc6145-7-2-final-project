@@ -59,7 +59,7 @@ export default function Search({winePairings}) {
         ))}
         
         </section>
-      : <p className={styles.noResults}>No WinePairings Found!</p>
+      : <p className={styles.noResults}>No Meal Plans Found!</p>
     }
     </>
   )
