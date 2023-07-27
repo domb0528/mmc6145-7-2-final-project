@@ -1,5 +1,6 @@
 .container {
   max-width: 1200px;
+  height: fit-content;
   margin: auto;
 }
 
@@ -7,7 +8,7 @@
   font-size: 4rem;
   text-align: center;
   margin: calc(var(--space) * 8) 0;
-  font-family: sans-serif;
+  font-family: Savoye Let;
 }
 
 .foodImg {
@@ -32,7 +33,7 @@
   padding: calc(var(--space) * 4) calc(var(--space) * 2);
   box-sizing: border-box;
   font-size: 2rem;
-  font-family: Savoye Let;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .goSearch {
