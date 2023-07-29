@@ -23,11 +23,8 @@
 }
 
 .jumbo p {
-  position: absolute;
-  background-color: var(--primaryClear);
-  color: white;
-  width: 100%;
-  bottom: 40px;
+  
+  color: #2329dc;
   margin: 0;
   text-align: center;
   padding: calc(var(--space) * 4) calc(var(--space) * 2);

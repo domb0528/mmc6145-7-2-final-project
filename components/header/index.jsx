@@ -6,7 +6,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>Calorie Watcher 🏋️‍♂️ </Link>
-        <Link href="/search">Search</Link>
+        <Link href="/search">Calorie Input</Link>
       </div>
     </header>
   )
